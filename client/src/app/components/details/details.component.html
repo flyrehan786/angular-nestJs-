@@ -1,0 +1,16 @@
+<h1>Details</h1>
+<hr />
+<button routerLink="/home" class="btn btn-secondary">Back to home</button>
+<br />
+
+<div *ngIf="post; else elseBlock" class="mt-4">
+    <label for="title">Title</label>
+    <br />
+    <textarea  name="" id="title" cols="10" rows="10" class="form-control" readonly>
+        {{ post | json  }}
+    </textarea>
+</div>
+<ng-template #elseBlock>
+
+    <h4 class="mt-4">Post not found.</h4>
+</ng-template>

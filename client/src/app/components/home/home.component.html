@@ -1,0 +1,11 @@
+<h1>Home</h1>
+<hr />
+<form class="row g-3" #f="ngForm" (ngSubmit)="send(f.value.id)">
+    <div class="col-auto">
+        <label for="inputId" class="visually-hidden">Id</label>
+        <input type="number" class="form-control" id="inputId" placeholder="Id" required name="id" ngModel>
+    </div>
+    <div class="col-auto">
+        <button [disabled]="f.invalid" type="submit" class="btn btn-primary mb-3">Send</button>
+    </div>
+</form>
